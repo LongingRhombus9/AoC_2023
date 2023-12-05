@@ -19,7 +19,7 @@ def main():
             for char in line:
                 # Symbol detected
                 if char == "*":
-                    # Mark adjacencies
+                    # Mark adjacencies, shame on me
                     lc = []
                     lc.append([line_idx - 1, char_idx - 1]) #TL
                     lc.append([line_idx - 1, char_idx]) #T
@@ -29,8 +29,6 @@ def main():
                     lc.append([line_idx + 1, char_idx - 1]) #BL
                     lc.append([line_idx + 1, char_idx]) #B
                     lc.append([line_idx + 1, char_idx + 1]) #BR
-
-                    # print(lc)
 
                     # Check adjacencies
                     found_idx = []
@@ -44,7 +42,6 @@ def main():
                             number = ""
                             # Move to start of number
                             while td_arr[l][c] in str(nums):
-                                # print("VAL", td_arr[l][c], "IDX", c)
                                 c -= 1
                             # Read whole number from start
                             c += 1
@@ -69,8 +66,6 @@ def main():
                 char_idx += 1
             line_idx += 1
         
-        # print(td_arr)
-        # print(all_nums)
         print(sum((all_nums)))
 
 main()

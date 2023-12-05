@@ -1,5 +1,4 @@
 def main():
-    # count = 0 #DEBUG
     nums = [0,1,2,3,4,5,6,7,8,9]
     num_to_word = {
         "one":1,
@@ -17,8 +16,6 @@ def main():
     with open("input.txt") as f:
         lines = f.readlines()
         for line in lines:
-            # if count >= 5: break #DEBUG
-            # print(line.rstrip()) #DEBUG
 
             idx_to_val = {}
 
@@ -44,10 +41,6 @@ def main():
             output = list(dict(sorted(idx_to_val.items())).values())
             all_values.append((int(output[0] + output[-1])))
 
-            # print(idx_to_val) #DEBUG
-            # count += 1 #DEBUG
-            # print(list(dict(sorted(idx_to_val.items())).values())) #DEBUG
-        # print(all_values) #DEBUG
         print(sum(all_values))
 
 main()

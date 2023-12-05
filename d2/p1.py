@@ -27,9 +27,5 @@ def main():
                 print(id, results, "PASS")
             else:
                 print(id, results, "FAIL")
-        print("ID", valid_id)
-        print("ID_SUM", sum(valid_id))
-        print("POWER", powers)
-        print("POWER_SUM", sum(powers))
 
 main()

@@ -16,7 +16,6 @@ def main():
             for hand in cards[0].strip().split(" "):
                 if hand != "":
                     current_hand.append(hand)
-                # print(hand)
             
             for win in cards[1].strip().split(" "):
                 if win != "":
@@ -28,11 +27,6 @@ def main():
                         wins.append(win_card)
             hand_match[card_no] = len(wins)            
 
-            # print(cards)
-            # print("CUR", current_hand)
-            # print("WIN", winning_hand)
-            # print("WINS", wins)
-        # print(hand_match)
         for hand in hand_match:
             hand_instance[hand] = 1
 
@@ -44,8 +38,6 @@ def main():
                 next_hand += 1
             for instance in next:
                 hand_instance[instance] += hand_instance[hand]
-            # print(hand, match_no)
-        # print(hand_instance.items())
         print(sum(hand_instance.values()))
             
 main()

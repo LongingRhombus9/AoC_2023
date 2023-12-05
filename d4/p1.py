@@ -15,7 +15,6 @@ def main():
             for hand in cards[0].strip().split(" "):
                 if hand != "":
                     current_hand.append(hand)
-                # print(hand)
             
             for win in cards[1].strip().split(" "):
                 if win != "":
@@ -33,11 +32,6 @@ def main():
                     points *= 2
             all_points.append(points)
 
-            print(cards)
-            print("CUR", current_hand)
-            print("WIN", winning_hand)
-            print("WINS", wins)
-            print("POINTS", points)
         print(">>>", sum(all_points))
 
 main()
