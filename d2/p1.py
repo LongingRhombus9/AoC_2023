@@ -24,8 +24,8 @@ def main():
             
             if results["red"] <= 12 and results["green"] <= 13 and results["blue"] <= 14:
                 valid_id.append(int(id))
-                print(id, results, "PASS")
-            else:
-                print(id, results, "FAIL")
+            
+        print("P1:", sum(valid_id))
+        print("P2:", sum(powers))
 
 main()
